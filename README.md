@@ -1,4 +1,4 @@
-# Asynchronous programming in .NET samples source code
+# Asynchronous programming in .NET samples
 
 * [Responsive WPF application demo](01-AsyncDesktop)  
 Demo source code of a WPF application to demonstrate responsive UI and the beneficts of using async
