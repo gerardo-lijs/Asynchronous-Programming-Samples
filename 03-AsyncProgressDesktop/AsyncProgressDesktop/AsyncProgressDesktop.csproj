@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.0.0-alpha0262" />
+    <PackageReference Include="ReactiveUI" Version="10.0.1-preview.2" />
+    <PackageReference Include="ReactiveUI.WPF" Version="10.0.1-preview.2" />
+  </ItemGroup>
+
+</Project>

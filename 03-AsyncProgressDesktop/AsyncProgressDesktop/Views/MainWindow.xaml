@@ -1,0 +1,25 @@
+﻿<reactiveui:ReactiveWindow x:Class="AsyncProgressDesktop.Views.MainWindow"
+        x:TypeArguments="viewmodels:MainWindowViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:AsyncProgressDesktop.ViewModels"
+        xmlns:reactiveui="http://reactiveui.net"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:AsyncProgressDesktop.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300" ResizeMode="NoResize">
+
+    <StackPanel Width="200" >
+        <Label>Start number</Label>
+        <Controls:NumericUpDown x:Name="StartNumberNumericUpDown" Interval="1" Minimum="1" Margin="5" HorizontalContentAlignment="Left"/>
+        <Label>End number</Label>
+        <Controls:NumericUpDown x:Name="EndNumberNumericUpDown" Interval="1" Minimum="1" Margin="5" HorizontalContentAlignment="Left"/>
+
+        <Button x:Name="CalculatePrimeNumbersButton" Margin="5" Content="Calculate prime numbers" />
+        <TextBlock x:Name="ResultTextBlock" TextWrapping="Wrap" Margin="5" />
+
+        <Controls:ProgressRing x:Name="CalculatingProgress" IsActive="True" />
+    </StackPanel>
+</reactiveui:ReactiveWindow>

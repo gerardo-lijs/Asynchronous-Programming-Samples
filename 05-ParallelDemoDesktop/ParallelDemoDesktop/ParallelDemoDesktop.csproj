@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.0.0-alpha0262" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.1.0.20190416" />
+    <PackageReference Include="ReactiveUI" Version="10.0.1-preview.2" />
+    <PackageReference Include="ReactiveUI.WPF" Version="10.0.1-preview.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sagradafamilia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="lenna.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="casabatllo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
