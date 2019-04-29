@@ -18,7 +18,7 @@ namespace AsyncWebAPIDemo.Controllers
         }
 
         // GET api/cpubound
-        // .\bombardier.exe "http://localhost:5001/api/cpubound?start=1&end=1000000" -n 20 -t 100s
+        // .\bombardier.exe "http://localhost:60636/api/cpubound?start=1&end=1000000" -n 20 -t 100s
         [HttpGet]
         public async Task<ActionResult<int>> Get([FromQuery] int start, [FromQuery] int end)
         {

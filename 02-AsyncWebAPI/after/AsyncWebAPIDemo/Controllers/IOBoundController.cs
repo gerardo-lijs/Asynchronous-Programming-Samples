@@ -19,7 +19,7 @@ namespace AsyncWebAPIDemo.Controllers
         }
 
         // GET api/iobound
-        // .\bombardier.exe "http://localhost:5001/api/iobound" -n 20 -t 100s
+        // .\bombardier.exe "http://localhost:60636/api/iobound" -n 20 -t 100s
         [HttpGet]
         public async Task<ActionResult<int>> Get()
         {
