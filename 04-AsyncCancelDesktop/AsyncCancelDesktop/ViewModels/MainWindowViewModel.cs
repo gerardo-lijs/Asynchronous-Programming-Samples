@@ -47,6 +47,9 @@ namespace AsyncCancelDesktop.ViewModels
             CalculatePrimeNumbers = ReactiveCommand.CreateFromTask(CalculatePrimeNumbersImpl);
             CalculatePrimeNumbers.IsExecuting.ToProperty(this, x => x.IsCalculating, out _IsCalculating);
 
+            // TODO: Program another command with this CPU Load code. Add CancellationToken
+            //await LoadTesting.CPU.SimulateExpensiveMethodAsync(15);
+
             // Cancel command
             CalculateCancel = ReactiveCommand.Create(() => _ctsCalculatePrimeNumbers?.Cancel(true));
         }
@@ -57,7 +60,7 @@ namespace AsyncCancelDesktop.ViewModels
 
             try
             {
-                int primesCount = await Task.Run(() => 
+                int primesCount = await Task.Run(() =>
                        ParallelEnumerable.Range(StartNumber, EndNumber).WithCancellation(_ctsCalculatePrimeNumbers.Token).Count(n => Enumerable.Range(2, (int)Math.Sqrt(n) - 1).All(i => n % i > 0)));
 
                 ResultText = $"{primesCount} prime numbers between {StartNumber} and {EndNumber}";

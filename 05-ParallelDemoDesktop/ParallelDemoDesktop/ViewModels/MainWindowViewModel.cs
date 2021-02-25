@@ -70,8 +70,8 @@ namespace AsyncCancelDesktop.ViewModels
                         {
                             _ctsCancel.Token.ThrowIfCancellationRequested();
 
-                            Mat src = new Mat(filename);
-                            Mat resut = src.Canny(50, 200);
+                            using var src = new Mat(filename);
+                            using var resut = src.Canny(50, 200);
                         }
 
                         //using (new Window($"src image {filename}", src))
@@ -109,8 +109,8 @@ namespace AsyncCancelDesktop.ViewModels
                             {
                                 _ctsCancel.Token.ThrowIfCancellationRequested();
 
-                                Mat src = new Mat(filename);
-                                Mat resut = src.Canny(50, 200);
+                                using var src = new Mat(filename);
+                                using var resut = src.Canny(50, 200);
                             }
 
                             //using (new Window($"src image {filename}", src))

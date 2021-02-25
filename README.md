@@ -14,5 +14,3 @@ Demo soure code of a simple WPF Desktop Application to demonstrate how you can u
 ## Notes
 * In WPF desktop sample I didn't use MVVM to have a minimalistic example
 * In Progress, Cancellation and Parallel samples source code I used [ReactiveUI](https://reactiveui.net/) as MVVM framework, [MahApps](https://mahapps.com/) and [OpenCVSharp](https://github.com/shimat/opencvsharp) for simulating a CPU-bound expensive operation. If you are interested in this projects it's worth checkin it out since they are a minimalistic example and easy to see how they work.
-* The demo applications use .NET Core 3 Preview 4 so if you don't have it already you an get it from [here](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* You may need to enable .NET Core 3 in VS2019 [(howto)](https://visualstudiomagazine.com/articles/2019/03/08/vs-2019-core-tip.aspx)
