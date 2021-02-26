@@ -1,8 +1,8 @@
-﻿using AsyncCancelDesktop.ViewModels;
+﻿using ParallelDemoDesktop.ViewModels;
 using ReactiveUI;
 using System.Reactive.Disposables;
 
-namespace AsyncCancelDesktop.Views
+namespace ParallelDemoDesktop.Views
 {
     public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
@@ -12,6 +12,8 @@ namespace AsyncCancelDesktop.Views
             ViewModel = new MainWindowViewModel();
             this.WhenActivated(disposableRegistration =>
             {
+                this.WhenAnyValue(viewModel => viewModel.ViewModel).BindTo(this, view => view.DataContext).DisposeWith(disposableRegistration);
+
                 // Values
                 this.OneWayBind(ViewModel, viewModel => viewModel.ResultText, view => view.ResultTextBlock.Text).DisposeWith(disposableRegistration);
 

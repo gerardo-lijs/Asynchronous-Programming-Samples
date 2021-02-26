@@ -9,7 +9,7 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AsyncCancelDesktop.ViewModels
+namespace ParallelDemoDesktop.ViewModels
 {
     public class MainWindowViewModel : ReactiveObject
     {
