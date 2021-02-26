@@ -4,12 +4,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:viewModels="clr-namespace:ParallelDemoDesktop.ViewModels"
         xmlns:reactiveui="http://reactiveui.net"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
-        xmlns:local="clr-namespace:ParallelDemoDesktop.Views"
+        xmlns:local="clr-namespace:ParallelDemoDesktop.Views" 
+        xmlns:viewmodels="clr-namespace:ParallelDemoDesktop.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance Type=viewModels:MainWindowViewModel, IsDesignTimeCreatable=false}"
         Title="MainWindow" Height="400" Width="300" ResizeMode="NoResize">
 
     <StackPanel Width="250" >
